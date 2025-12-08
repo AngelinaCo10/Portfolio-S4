@@ -82,7 +82,7 @@ export default function HomePage() {
 
           <div className="background-letters">
             <Image
-              // src="/images/Logo_Background.svg"
+              src="/images/Logo_Background.svg"
               alt="Background Logo"
               width={300}
               height={300}
