@@ -1,16 +1,10 @@
-@import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -31,33 +25,24 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-
+  height: 100%;
 }
 
 header {
-  /* width: 100%;
-    height: 100vh; */
-  /* background-color: black; */
   background-image: url("/images/background.png");
   min-height: 100vh;
-  /* zorgt dat de body altijd volle hoogte heeft */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: clamp(300px, 20vw, 300px);
   position: relative;
-  /* nodig zodat absolute children zich binnen deze section positioneren */
-  /* Bepaald grootte van logo */
-  /* background-color: rgba(232, 230, 230, 0.514); */
-  /* witte waas */
   background-blend-mode: lighten;
-  /* of overlay, multiply, screen */
-  width: 100vw
+  width: 100%;
+  background-color: #f5f5f5;
 }
 
 /* Zorg dat de inline SVG (class="Palmtree1" of "palmtree1") zich als achtergrond gedraagt
         i.p.v. dat het layout verschuift. Dit haalt het uit de normale document flow. */
-.Palmtree1,
-.palmtree1 {
+.Palmtree1 {
   position: absolute;
   right: 2rem;
   /* afstand vanaf rechterkant, pas aan naar wens */
@@ -84,11 +69,13 @@ header {
 @media (max-width: 600px) {
 
   .Palmtree1,
-  .palmtree1 {
+  .Palmtree2 {
     width: clamp(180px, 35vw, 400px);
     /* kleinere min/max voor mobieltjes */
     right: 1rem;
     transform: translateY(10%);
+    opacity: 0.25;
+    width: 70%;
   }
 }
 
@@ -103,7 +90,7 @@ header {
   align-items: center;
   justify-content: space-between;
   /* verdeelt links-midden-rechts */
-  padding: 0rem 2rem;
+  padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -112,7 +99,6 @@ header {
   font-family: 'tenor sans';
   color: #303030;
   z-index: 9999;
-  background-color: #fefefe;
 }
 
 
@@ -135,7 +121,7 @@ header {
   justify-content: flex-start;
 }
 
-/* Midden */
+/* Icons Midden */
 .navbar-links-center {
   flex: 1;
   display: flex;
@@ -149,7 +135,7 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-/* Rechts */
+/* Icons Rechts */
 .navbar-links-rechts {
   flex: 1;
   display: flex;
@@ -157,6 +143,12 @@ header {
   gap: 1.5rem;
   align-items: center;
 }
+
+.navbar-links-rechts img {
+  width: 28px;
+  height: 28px;
+}
+
 
 .navbar-links-rechts a:hover {
   transform: translateY(-5px) rotate(-0deg);
@@ -204,21 +196,20 @@ header {
 }
 
 img {
-  height: 70px;
-  width: 70px;
+  max-width: 100%;
+  height: auto;
 }
+
 
 /* HEADER */
 
 .header {
   text-align: center;
   padding: 4rem 1rem;
-  /* background-color: var(--background); */
 }
-
 .header-title {
   font-size: 3rem;
-  color: var(--foreground);
+  color: #171717;
   margin: 1rem;
   color: #303030;
   font-size: 70px;
@@ -346,18 +337,19 @@ img {
 
 .balk {
   width: 100%;
-  height: 40px;
-  background-color: #8a8a8a;
+  height: 10px;
+  background-color: #ffffff;
 }
 
 .greenSection {
-  width: 100%;
-  height: 100vh;
-  background-color: #A5D2C7;
-  display: flex;
+  background-color: #f5f5f5;
+  /* min-height: 100vh; */
+  height: auto;
+  padding: 3rem 2rem;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: relative; */
   /* nodig zodat absolute children zich binnen deze section positioneren */
 
 }
@@ -366,7 +358,7 @@ img {
   .greenSection {
     height: auto;
     /* laat de hoogte automatisch aanpassen op kleine schermen */
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     /* voeg wat verticale padding toe voor ruimte */
   }
 }
@@ -374,7 +366,6 @@ img {
 /* Zorg dat de inline SVG (class="Palmtree1" of "palmtree1") zich als achtergrond gedraagt
    i.p.v. dat het de layout verschuift. Dit haalt het uit de normale document flow. */
 .Palmtree1,
-.palmtree1,
 .Palmtree2 {
   position: absolute;
   right: 0rem;
@@ -417,26 +408,22 @@ img {
 
 }
 
-/* Zorg dat de inhoud boven de achtergrond-SVG staat */
-.greenSection .contents {
-  position: relative;
-  z-index: 1;
-}
 
 .contents {
   /* background-color: thistle; */
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
   align-items: start;
-  width: 85.625rem;
-  height: 28.375rem;
-  height: auto;
-
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
 }
+
 
 .textProjects {
   /* background-color: rgb(166, 28, 166); */
-  width: 23.0625rem;
+  width: 100%;
   height: 25rem;
 }
 
@@ -456,7 +443,7 @@ p {
 
 .containerProjectCards {
   /* background-color: rgb(209, 182, 92); */
-  width: 65rem;
+  width: auto;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -476,7 +463,6 @@ p {
     flex-direction: column;
     height: auto;
     justify-content: center;
-    margin-left: 200px;
 
   }
 
@@ -549,7 +535,7 @@ h2 {
 .cardButton {
   /* margin-left: 1rem; */
   /* zet de knop altijd naar beneden binnen de flex-kolom */
-  margin-top: auto;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
   padding: 0.6rem 5rem;
   background-color: #F6DAF4;
@@ -576,18 +562,16 @@ h2 {
 
 /* Skills Section */
 .skillsSection {
-  height: 80vh;
-  background-color: #f3f3f3;
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
+  height: auto;
+  padding: 3rem 2rem;
+  background-color: #f5f5f5;
 
 }
 
 .skillsContent {
-  /* background-color: #9d7068; */
-  width: 85.625rem;
-  height: 35.375rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -602,6 +586,7 @@ h2 {
     height: auto;
     justify-content: center;
     /* margin-left: 200px; */
+    padding: 2rem 1rem;
   }
 
   .skillsContent {
@@ -614,13 +599,13 @@ h2 {
 
 
 .skillsContent h1 {
-  align-self: start;
+  /* align-self: start; */
   width: 20%;
 }
 
 .titleSkills {
   /* background-color: #4f46e5; */
-  justify-self: start;
+  /* justify-self: start; */
 }
 
 .skillsColumns {
@@ -641,16 +626,20 @@ h2 {
 .skills h3 {
   font-family: 'tenor sans ';
   color: #303030;
+  border-bottom: 1px solid #0a0a0a;
+    border-top: 1px solid #0a0a0a;
+
+  /* background-color: #F6DAF4; */
 }
 
 h4 {
   font-family: 'tenor sans';
   color: #303030;
-  /* padding: 0.8rem; */
-  /* background-color: #e8d1e6; */
-  /* display: flex;
-    justify-content: center; */
-  /* border: 1px solid #303030; */
+  /* padding: 0.8rem;
+  background-color: #e8d1e6;
+  display: flex;
+    justify-content: center;
+  border: 1px solid #303030; */
   font-size: 16px;
 
 }
@@ -664,7 +653,7 @@ footer {
   height: 10rem;
   font-family: 'tenor sans';
   margin: 0;
-  padding: 0;
+  padding: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -688,7 +677,7 @@ footer p {
 
 .footerContainer {
   /* background-color: #F6DAF4; */
-  width: 90%;
+  width: 100%;
   height: 100%;
 }
 
@@ -712,4 +701,140 @@ footer p {
     width: 3rem;
     height: 3rem;
   }
+
+  footer {
+    padding: 0 1rem;
+  }
 }
+
+/* ====== RESPONSIVE LAYOUT ====== */
+
+/* Desktop: text links, cards rechts */
+.contents {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 0rem;
+  align-items: start;
+}
+
+/* Cards in een grid */
+.containerProjectCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 19rem);
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Cards mogen niet fixed breed zijn binnen grid */
+.projectCard {
+  width: 100%;
+  margin: 0;
+}
+
+/* Skills grid */
+.skillsColumns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  height: auto;
+}
+
+.skills {
+  width: 100%;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+  .contents {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .textProjects {
+    width: 100%;
+    height: auto; 
+  }
+
+  .arrow {
+    margin: 2rem auto 0;
+    display: block;
+  }
+
+  .containerProjectCards {
+    grid-template-columns: 19rem;
+    justify-content: center;
+  }
+
+  /* .skillsColumns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  } */
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-links-center {
+    flex-wrap: wrap;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .contact{
+    margin-top: 1rem;
+  }
+
+  .header-title {
+    font-size: 2.5rem; /* ipv 70px */
+  }
+
+  .header-description {
+    font-size: 1rem; /* ipv 24px */
+  }
+
+  header {
+    min-height: 70vh; /* korter op mobiel */
+  }
+
+  .greenSection {
+    min-height: 60vh; /* korter op mobiel */
+  }
+
+  .containerProjectCards {
+    grid-template-columns: repeat(auto-fit, 19rem);
+  }
+
+  .skillsColumns {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .skills {
+    text-align: center;
+  }
+
+  .titleSkills {
+    text-align: center;
+  }
+  
+
+  .skillsContent h1 {
+    width: 100%;
+  }
+
+  header {
+    background-size: clamp(200px, 50vw, 400px); /* groter achtergrond op mobiel */
+  }
+
+  .header {
+    padding: 2rem 1rem; /* minder padding op mobiel */
+  }
+}
+ 
