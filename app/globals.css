@@ -19,6 +19,13 @@
   font-family: Arial, Helvetica, sans-serif;
 } */
 
+/*Ruimte voor tussen navbar en footer  */
+.page-content {
+  min-height: calc(100vh - 200px); /* navbar + footer hoogte */
+  padding-bottom: 120px;
+}
+
+
 html,
 body {
   scroll-behavior: smooth;
@@ -765,6 +772,25 @@ footer p {
     grid-template-columns: 19rem;
     justify-content: center;
   }
+  
+.bloemfoto,
+.bloemfoto2 {
+  position: absolute;
+  right: 0rem;
+  bottom: -15rem;
+  width: 50%;
+  max-width: 12rem;
+  height: auto;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translateY(5%);
+}
+
+  .bloemfoto2 {
+  left: 0rem;
+  bottom: -110rem;
+
+}
 
   /* .skillsColumns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -836,5 +862,24 @@ footer p {
   .header {
     padding: 2rem 1rem; /* minder padding op mobiel */
   }
+
+  .bloemfoto,
+.bloemfoto2 {
+  position: absolute;
+  right: 0rem;
+  bottom: -5rem;
+  width: 50%;
+  max-width: 12rem;
+  height: auto;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translateY(5%);
+}
+
+  .bloemfoto2 {
+  left: 0rem;
+  bottom: -100rem;
+
+}
 }
  
