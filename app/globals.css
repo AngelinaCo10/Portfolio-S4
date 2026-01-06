@@ -40,9 +40,9 @@ header {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: clamp(300px, 20vw, 300px);
+  /* background-size: clamp(100vw, 100vw, 100vw); */
   position: relative;
-  background-blend-mode: lighten;
+  background-blend-mode: color-burn;
   width: 100%;
   background-color: #f5f5f5;
 }
@@ -138,9 +138,13 @@ header {
 }
 
 .navbar-links-center a:hover {
+  color: rgb(167, 167, 167);
+}
+
+/* .navbar-links-center a:hover {
   transform: translateY(-5px) rotate(-0deg);
   transition: all 0.3s ease-in-out;
-}
+} */
 
 /* Icons Rechts */
 .navbar-links-rechts {
@@ -165,14 +169,15 @@ header {
 
 .contact {
   background-color: #F6DAF4;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 1.875rem;
 }
 
 .contact:hover {
-  transform: translateY(-5px) rotate(-0deg);
-  transition: all 0.3s ease-in-out;
-
+  /* transform: translateY(-5px) rotate(-0deg);
+  transition: all 0.3s ease-in-out; */
+  background-color: #e8d1e6;
+  
 }
 
 /* Algemene link styling */
@@ -185,7 +190,7 @@ header {
 }
 
 .navbar a:hover {
-  color: #4f46e5;
+  /* color: rgb(167, 167, 167); */
 }
 
 .navbar-logo {
@@ -251,17 +256,16 @@ img {
   border-radius: 2rem;
   text-decoration: none;
   /* transition: 1ms 0.5ms ease; */
-  border-radius: 1.875rem;
   font-family: 'tenor sans', serif;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease-in-out ;
 
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .header-button:hover {
   background-color: #e8d1e6;
   /* indigo-700 */
   transform: translateY(-5px) rotate(-0deg);
-  transition: all 0.3s ease-in-out;
   /* box-shadow: 0 12px 20px rgba(0,0,0,0.18); */
 
 }
@@ -337,8 +341,29 @@ img {
   animation-delay: 1.4s;
 }
 
-/* … enzovoort, kun je uitbreiden */
+.animationArrow {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #FFF;
+  border: 1px solid #CECECE;
+  border-radius: 50%;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto 0;
+  filter: drop-shadow(0 0 20px rgba(255, 211, 232, 0.82));
+  animation: bounce 5s infinite;
+}
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
 
 /* onder header */
 
@@ -505,6 +530,15 @@ h2 {
   cursor: pointer;
 }
 
+.projectCard img{
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.projectCard:hover img{
+  filter: grayscale(0%);
+}
+
 /* reopen block so the remaining declarations stay valid */
 .projectCard {
   transform: translateY(1);
@@ -654,7 +688,7 @@ h4 {
 /* FOOTER */
 
 footer {
-  background-color: #8a8a8a;
+  background-color: #535353;
   /* text-align: center; */
   /* padding: 3rem; */
   height: 10rem;
@@ -686,22 +720,25 @@ footer p {
   /* background-color: #F6DAF4; */
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .footerImages {
-  width: 3rem;
-  height: 6rem;
+  /* width: 3rem;
+  height: 6rem; */
   max-width: 100%;
   object-fit: contain;
   /* schaalt de afbeelding binnen de gegeven box zonder vervormen */
   flex-shrink: 0;
   /* voorkomt dat afbeeldingen krimpen als ruimte beperkt is */
-  /* Kleur aanpassen (externe SVG via <img>): gebruik filter om van zwart naar lichtgrijs te gaan */
-  -webkit-filter: invert(100%) brightness(96%);
-  /* tweak brightness voor exacte toon */
-  filter: invert(100%) brightness(96%);
 }
 
+.iconsContainer{
+  display: flex;
+  gap: 2rem;
+}
 /* Kleine schermen: maak footer afbeeldingen kleiner zodat ze niet de footer vergroten */
 @media (max-width: 600px) {
   .footerImages {

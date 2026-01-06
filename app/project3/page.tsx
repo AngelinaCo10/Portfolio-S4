@@ -1,3 +1,5 @@
+import "../project-styles.css";
+
 export default function Page() {
   return (
     <main>

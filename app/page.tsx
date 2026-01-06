@@ -33,6 +33,11 @@ export default function Page() {
           <Link href="/#greenSection" className="header-button">
             Get to know me more
           </Link>
+          <div className="animationArrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="38" viewBox="0 0 24 38" fill="none">
+              <path d="M11.5469 38L23.0939 18L-0.000131171 18L11.5469 38ZM11.5469 0L9.54688 -8.74228e-08L9.54687 20L11.5469 20L13.5469 20L13.5469 8.74228e-08L11.5469 0Z" fill="#686767ff" />
+            </svg>
+          </div>
         </section>
       </header>
 
@@ -67,7 +72,7 @@ export default function Page() {
                   easier and it saves time, because they don’t have many employees.
                 </p>
                 <Link href="/project1" className="cardButton">
-                  More
+                  Visit project
                 </Link>
               </div>
 
@@ -84,7 +89,7 @@ export default function Page() {
                   website so that people can order flights for the best destinations.
                 </p>
                 <Link href="/project2" className="cardButton">
-                  More
+                  Visit project
                 </Link>
               </div>
 
@@ -102,7 +107,7 @@ export default function Page() {
                   on their own.
                 </p>
                 <Link href="/project3" className="cardButton">
-                  More
+                  Visit project
                 </Link>
               </div>
             </div>
