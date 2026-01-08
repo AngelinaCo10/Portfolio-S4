@@ -36,8 +36,8 @@ body {
 }
 
 header {
-  background-image: url("/images/background.png");
-  min-height: 100vh;
+  /* background-image: url("/images/background.png"); */
+  min-height: 80vh;
   background-repeat: no-repeat;
   background-position: center center;
   /* background-size: clamp(100vw, 100vw, 100vw); */
@@ -222,7 +222,7 @@ img {
 .header-title {
   font-size: 3rem;
   color: #171717;
-  margin: 1rem;
+  /* margin: 1rem; */
   color: #303030;
   font-size: 70px;
   font-family: Playfair Display;
