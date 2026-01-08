@@ -43,7 +43,7 @@ body {
     gap: clamp(24px, 5vw, 10rem);    
     /* align-items: center; */
     justify-content: space-between;
-
+    margin-top: 2rem;
 
 }
 .step1, .step3{
@@ -54,7 +54,8 @@ body {
     border-radius: 20px;
     border: 20px solid #FFFFFF;
     max-width: 30rem;
-    height: 25rem;
+    height: 20rem;
+    background-color: rgb(197, 240, 255);
 }
 
 .step2{

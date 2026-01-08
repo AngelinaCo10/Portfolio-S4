@@ -1,4 +1,5 @@
 import "../project-styles.css";
+import ImageModal from "@/components/ImageModal";
 
 
 export default function Page() {
@@ -9,52 +10,69 @@ export default function Page() {
         <section className="headertop">
 
           <h1 className="header-title typer">
-            Mario & Luigi's Pizzaria
+            Travel Agency LinAir
           </h1>
 
           <p className="header-description">
-            A project where we had to improve the management of the chaotic restaurant of Mario & Luigi, where there was no usement of any technology .
+            Because I love traveling I decided to create my own travel agency for my individual project, called LinAir. the goal of this project was to desgin a modern, friendly and clear website where users can get inspired and easily explore destinations.
             <br />
             <br />
-            Semester 1
+            Semester 2
           </p>
 
         </section>
       </header>
       <section className="balk"></section>
       <section className="contentProcess">
-        <h1>Project 1 Page</h1>
         <div className="step1">
           <div className="text">
-            
-            <h2>Step 1</h2>
+
+            <h2>Project description</h2>
             <div className="description">
-              <p>This is the description of project 1. Here you can explain what the project is about, the technologies used, and any other relevant information.</p>
+              <p>
+                LinAir is a travel agency that focuses on comfort, inspiration, and a relaxing travel experience. The website is designed to immediately give users a holiday feeling through colors, images, and layout. Visitors can see promotions, popular destinations, and information about the airline.
+              </p>
             </div>
           </div>
-          <img src="/images/Webdesign versie 2.png" alt="foto" />
+          <a href="/zoom.html" target="_blank" rel="noopener noreferrer">
+            <ImageModal src="/images/Webdesign versie 2.png" alt="foto" />
+          </a>
         </div>
 
+        <section className="balk"></section>
 
         <div className="step2">
-          <img src="/images/menu.png" alt="foto" />
+          <ImageModal src="/images/Vleugel.png" alt="foto" />
 
           <div className="text">
-            <h2>Step 2</h2>
+            <h2>Website Features</h2>
             <div className="description">
-              <p>This is the description of project 1. Here you can explain what the project is about, the technologies used, and any other relevant information.</p>
+              <p>
+                The website includes several features, such as:
+                <br /><br />
+                • A homepage banner with special offers and a “destination of the month”
+                <br /><br />
+                • A countdown timer until the official opening
+                <br /><br />
+
+                • Information about the airline and its values
+                <br /><br />
+
+                • A section with favorite destinations, including Curaçao, Almería (Spain), and Panama City
+                <br /><br />
+
+                • A live flight map using Flightradar24 to show the position of flights
+                <br /><br />
+
+                •  A clear navigation menu and footer with destinations and contact options
+                <br /><br />
+                I also made a airplane wing with the logo of the travel agency i made in Adobe Illustrator.
+              </p>
             </div>
           </div>
         </div>
-        <div className="step3">
-          <div className="text">
-            <h2>Step 3</h2>
-            <div className="description">
-              <p>This is the description of project 1. Here you can explain what the project is about, the technologies used, and any other relevant information.</p>
-            </div>
-          </div>
-          <img src="/images/Gegevens klant.png" alt="foto" />
-        </div>
+        <section className="balk"></section>
+
       </section>
     </main>
   )

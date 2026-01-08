@@ -15,12 +15,12 @@ export default function Navbar() {
 
       <div className="navbar-links-center">
         <Link href="/#greenSection">MY WORK</Link>
-        <Link href="/#about">ABOUT ME</Link>
+        <Link href="/#aboutmeSection">ABOUT ME</Link>
       </div>
 
       <div className="navbar-links-rechts">
         <div className="contact">
-          <Link href="/#contact">CONTACT</Link>
+          <Link href="#contact">CONTACT</Link>
         </div>
       </div>
     </nav>

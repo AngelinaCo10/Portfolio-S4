@@ -27,7 +27,7 @@ export default function Page() {
           </h1>
 
           <p className="header-description">
-            Your website designer that loves learning new stuff
+            Your designer that loves making and learning new things.
           </p>
 
           <Link href="/#greenSection" className="header-button">
@@ -42,9 +42,78 @@ export default function Page() {
       </header>
 
       <section className="balk">
+
         <img src="/images/Bloem foto.png" alt="" className="bloemfoto" />
       </section>
+      <section className="aboutmeSection" id="aboutmeSection">
 
+        <div className="aboutmeContent">
+          <div className="textProjects">
+            <h1>About Me.</h1>
+            <p>
+              I am 22 years old and I am currently studying HBO-ICT Media Design. I have a strong interest in UI/UX design and web development. I enjoy creating websites and apps that are user-friendly, visually appealing, and easy to use.
+              <br /><br />
+              I would like to learn new skills and technologies and continue developing myself. In the future, I want to combine UI/UX design with development, so I can both design and build digital products.            </p>
+          </div>
+          <img src="/images/Mefoto.jpeg" alt="foto" className="mefoto" />
+
+          <div className="containerprojects">
+            <div className="containerProjectCards">
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="balk"></section>
+
+      {/* Skills */}
+      <section className="skillsSection">
+        {/* <img src="/images/Bloem foto.png" alt="" className="bloemfoto2" /> */}
+
+        <div className="skillsContent">
+          <div className="titleSkills">
+            <h1>Skills.</h1>
+          </div>
+
+          <div className="skillsColumns">
+            <div className="skills">
+              <h3>Design</h3>
+              <h4>Figma</h4>
+              <h4>UX/UI</h4>
+              <h4>Responsive Design</h4>
+              <h4>Wireframing</h4>
+              <h4>Photoshop</h4>
+              <h4>Illustrator</h4>
+              <h4>InDesign</h4>
+            </div>
+
+            <div className="skills">
+              <h3>Frontend</h3>
+              <h4>HTML</h4>
+              <h4>CSS</h4>
+              <h4>Next.JS</h4>
+            </div>
+
+            <div className="skills">
+              <h3>Backend</h3>
+              <h4>Vercel</h4>
+              <h4>Supabase</h4>
+            </div>
+
+            <div className="skills">
+              <h3>Soft Skills</h3>
+              <h4>Communication</h4>
+              <h4>Teamworker</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="balk">
+
+      </section>
       {/* Projects */}
       <section className="greenSection" id="greenSection">
         <div className="contents">
@@ -110,48 +179,6 @@ export default function Page() {
                   Visit project
                 </Link>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="balk">{/* spacer */}</section>
-
-      {/* Skills */}
-      <section className="skillsSection">
-        <img src="/images/Bloem foto.png" alt="" className="bloemfoto2" />
-
-        <div className="skillsContent">
-          <div className="titleSkills">
-            <h1>Skills.</h1>
-          </div>
-
-          <div className="skillsColumns">
-            <div className="skills">
-              <h3>Web design</h3>
-              <h4>Figma</h4>
-              <h4>UX/UI</h4>
-              <h4>Responsive Design</h4>
-              <h4>Wireframing</h4>
-            </div>
-
-            <div className="skills">
-              <h3>Frontend</h3>
-              <h4>HTML</h4>
-              <h4>CSS</h4>
-              <h4>Next.JS</h4>
-            </div>
-
-            <div className="skills">
-              <h3>Backend</h3>
-              <h4>Vercel</h4>
-              <h4>Supabase</h4>
-            </div>
-
-            <div className="skills">
-              <h3>Soft Skills</h3>
-              <h4>Communication</h4>
-              <h4>Teamworker</h4>
             </div>
           </div>
         </div>

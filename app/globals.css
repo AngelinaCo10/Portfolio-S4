@@ -1,4 +1,3 @@
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -21,8 +20,8 @@
 
 /*Ruimte voor tussen navbar en footer  */
 .page-content {
-  min-height: calc(100vh - 200px); /* navbar + footer hoogte */
-  padding-bottom: 120px;
+  min-height: calc(100vh - 200px);
+  /* navbar + footer hoogte */
 }
 
 
@@ -98,14 +97,21 @@ header {
   justify-content: space-between;
   /* verdeelt links-midden-rechts */
   padding: 1rem 2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+
   z-index: 50;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   background-color: #f5f5f5;
   font-family: 'tenor sans';
   color: #303030;
   z-index: 9999;
+  width: auto;
+  box-sizing: border-box;
+  /* <- dit is de sleutel */
+
 }
 
 
@@ -177,7 +183,7 @@ header {
   /* transform: translateY(-5px) rotate(-0deg);
   transition: all 0.3s ease-in-out; */
   background-color: #e8d1e6;
-  
+
 }
 
 /* Algemene link styling */
@@ -219,6 +225,7 @@ img {
   text-align: center;
   padding: 4rem 1rem;
 }
+
 .header-title {
   font-size: 3rem;
   color: #171717;
@@ -258,7 +265,7 @@ img {
   /* transition: 1ms 0.5ms ease; */
   font-family: 'tenor sans', serif;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.25);
-  transition: all 0.4s ease-in-out ;
+  transition: all 0.4s ease-in-out;
 
 }
 
@@ -357,9 +364,12 @@ img {
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-15px);
   }
@@ -384,6 +394,14 @@ img {
   position: relative; */
   /* nodig zodat absolute children zich binnen deze section positioneren */
 
+}
+
+.mefoto {
+  border-radius: 20px;
+  border: 20px solid #FFFFFF;
+  max-width: 30rem;
+  height: 20rem;
+  background-color: rgb(197, 240, 255);
 }
 
 @media (max-width: 600px) {
@@ -453,10 +471,52 @@ img {
 }
 
 
+.aboutmeSection {
+  background-color: #f5f5f5;
+  height: auto;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: space-between;
+}
+
+.aboutmeContent {
+  /* background-color: thistle; */
+  display: flex;
+  grid-template-columns: 320px 1fr;
+  gap: 6rem;
+  align-items: start;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: space-between;
+
+}
+
 .textProjects {
   /* background-color: rgb(166, 28, 166); */
   width: 100%;
   height: 25rem;
+}
+
+@media (max-width: 768px) {
+  .aboutmeContent {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .textProjects {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .mefoto {
+    max-width: 20rem;
+    height: 15rem;
+  }
 }
 
 h1 {
@@ -505,6 +565,7 @@ p {
 h2 {
   font-family: 'tenor sans';
   color: #303030;
+  margin-top: 0;
 }
 
 .projectCard {
@@ -530,12 +591,12 @@ h2 {
   cursor: pointer;
 }
 
-.projectCard img{
-  filter: grayscale(100%);
+.projectCard img {
+  /* filter: grayscale(100%); */
   transition: filter 0.3s ease-in-out;
 }
 
-.projectCard:hover img{
+.projectCard:hover img {
   filter: grayscale(0%);
 }
 
@@ -604,7 +665,7 @@ h2 {
 /* Skills Section */
 .skillsSection {
   height: auto;
-  padding: 3rem 2rem;
+  padding: 1rem 0rem 3rem 2rem;
   background-color: #f5f5f5;
 
 }
@@ -668,7 +729,7 @@ h2 {
   font-family: 'tenor sans ';
   color: #303030;
   border-bottom: 1px solid #0a0a0a;
-    border-top: 1px solid #0a0a0a;
+  border-top: 1px solid #0a0a0a;
 
   /* background-color: #F6DAF4; */
 }
@@ -735,10 +796,28 @@ footer p {
   /* voorkomt dat afbeeldingen krimpen als ruimte beperkt is */
 }
 
-.iconsContainer{
+.iconsContainer {
   display: flex;
   gap: 2rem;
 }
+
+.phoneLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: white;
+}
+
+.phoneLink:hover {
+  opacity: 0.8;
+}
+
+.phoneNumber {
+  font-size: 0.95rem;
+}
+
+
 /* Kleine schermen: maak footer afbeeldingen kleiner zodat ze niet de footer vergroten */
 @media (max-width: 600px) {
   .footerImages {
@@ -788,6 +867,8 @@ footer p {
   height: auto;
 }
 
+
+
 /* Tablet */
 @media (max-width: 960px) {
   .contents {
@@ -797,7 +878,7 @@ footer p {
 
   .textProjects {
     width: 100%;
-    height: auto; 
+    height: auto;
   }
 
   .arrow {
@@ -809,25 +890,25 @@ footer p {
     grid-template-columns: 19rem;
     justify-content: center;
   }
-  
-.bloemfoto,
-.bloemfoto2 {
-  position: absolute;
-  right: 0rem;
-  bottom: -15rem;
-  width: 50%;
-  max-width: 12rem;
-  height: auto;
-  pointer-events: none;
-  z-index: 1000;
-  transform: translateY(5%);
-}
+
+  .bloemfoto,
+  .bloemfoto2 {
+    position: absolute;
+    right: 0rem;
+    bottom: -15rem;
+    width: 50%;
+    max-width: 12rem;
+    height: auto;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translateY(5%);
+  }
 
   .bloemfoto2 {
-  left: 0rem;
-  bottom: -110rem;
+    left: 0rem;
+    bottom: -110rem;
 
-}
+  }
 
   /* .skillsColumns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -845,27 +926,31 @@ footer p {
     gap: 1rem;
     display: flex;
     flex-direction: column;
-    
+
   }
 
-  .contact{
+  .contact {
     margin-top: 1rem;
   }
 
   .header-title {
-    font-size: 2.5rem; /* ipv 70px */
+    font-size: 2.5rem;
+    /* ipv 70px */
   }
 
   .header-description {
-    font-size: 1rem; /* ipv 24px */
+    font-size: 1rem;
+    /* ipv 24px */
   }
 
   header {
-    min-height: 70vh; /* korter op mobiel */
+    min-height: 70vh;
+    /* korter op mobiel */
   }
 
   .greenSection {
-    min-height: 60vh; /* korter op mobiel */
+    min-height: 60vh;
+    /* korter op mobiel */
   }
 
   .containerProjectCards {
@@ -886,37 +971,38 @@ footer p {
   .titleSkills {
     text-align: center;
   }
-  
+
 
   .skillsContent h1 {
     width: 100%;
   }
 
   header {
-    background-size: clamp(200px, 50vw, 400px); /* groter achtergrond op mobiel */
+    background-size: clamp(200px, 50vw, 400px);
+    /* groter achtergrond op mobiel */
   }
 
   .header {
-    padding: 2rem 1rem; /* minder padding op mobiel */
+    padding: 2rem 1rem;
+    /* minder padding op mobiel */
   }
 
   .bloemfoto,
-.bloemfoto2 {
-  position: absolute;
-  right: 0rem;
-  bottom: -5rem;
-  width: 50%;
-  max-width: 12rem;
-  height: auto;
-  pointer-events: none;
-  z-index: 1000;
-  transform: translateY(5%);
-}
+  .bloemfoto2 {
+    position: absolute;
+    right: 0rem;
+    bottom: -5rem;
+    width: 50%;
+    max-width: 12rem;
+    height: auto;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translateY(5%);
+  }
 
   .bloemfoto2 {
-  left: 0rem;
-  bottom: -100rem;
+    left: 0rem;
+    bottom: -100rem;
 
+  }
 }
-}
- 

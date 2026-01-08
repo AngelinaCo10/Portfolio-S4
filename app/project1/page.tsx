@@ -1,4 +1,5 @@
 import "../project-styles.css";
+import ImageModal from "@/components/ImageModal";
 
 
 export default function Page() {
@@ -34,12 +35,13 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <img src="/images/Bestelpagina .png" alt="foto" />
+          <ImageModal src="/images/Bestelpagina .png" alt="foto" />
         </div>
 
+        <section className="balk"></section>
 
         <div className="step2">
-          <img src="/images/menu.png" alt="foto" />
+          <ImageModal src="/images/menu.png" alt="foto" />
 
           <div className="text">
             <h2>Website Features</h2>
@@ -64,6 +66,8 @@ export default function Page() {
             </div>
           </div>
         </div>
+        <section className="balk"></section>
+
         <div className="step3">
           <div className="text">
             <h2>My Contribution to the Project</h2>
@@ -82,18 +86,10 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <img src="/images/Gegevens klant.png" alt="foto" />
+          <ImageModal src="/images/Gegevens klant.png" alt="foto" />
         </div>
-                <div className="step3">
-          <div className="text">
-            <h2>Reflection</h2>
-            <div className="reflection">
-              <p>
-                As one of my first projects in web design, I learned a lot about creating user-friendly interfaces. I realized how important it is to think from the user's perspective and to test designs regularly. In future projects, I want to focus even more on usability and accessibility to ensure that everyone can easily use the websites I create.
-              </p>
-            </div>
-          </div>
-        </div>
+        <section className="balk"></section>
+
 
       </section>
     </main>
