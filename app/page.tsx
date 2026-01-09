@@ -18,7 +18,7 @@ export default function Page() {
               Your designer that loves making and learning new things.
             </p>
 
-            <Link href="/#greenSection" className="header-button">
+            <Link href="/#aboutmeSection" className="header-button">
               Get to know me more
             </Link>
 
