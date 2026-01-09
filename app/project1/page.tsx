@@ -88,7 +88,6 @@ export default function Page() {
           </div>
           <ImageModal src="/images/Gegevens klant.png" alt="foto" />
         </div>
-        <section className="balk"></section>
 
 
       </section>

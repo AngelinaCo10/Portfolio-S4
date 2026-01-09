@@ -71,7 +71,6 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <section className="balk"></section>
 
       </section>
     </main>

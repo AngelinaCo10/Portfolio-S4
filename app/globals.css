@@ -24,6 +24,9 @@
   /* navbar + footer hoogte */
 }
 
+.page {
+  width: 100%;
+}
 
 html,
 body {
@@ -223,7 +226,7 @@ img {
 
 .header {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 7rem 3rem;
 }
 
 .header-title {
@@ -378,7 +381,7 @@ img {
 /* onder header */
 
 .balk {
-  width: 100%;
+  /* width: 100%; */
   height: 10px;
   background-color: #ffffff;
 }
@@ -442,19 +445,23 @@ img {
 .bloemfoto,
 .bloemfoto2 {
   position: absolute;
-  right: 0rem;
-  bottom: -10rem;
-  width: 50%;
-  max-width: 12rem;
-  height: auto;
+  right: 0;
+  top: 90vh;             /* vaste plek op de pagina */
+  width: clamp(8rem, 12vw, 12rem);
   pointer-events: none;
-  z-index: 1000;
-  transform: translateY(5%);
+}
+
+.bloemfoto2 {
+  position: absolute;
+  right: 0;
+  top: 235vh;             /* vaste plek op de pagina */
+  width: clamp(8rem, 12vw, 12rem);
+  pointer-events: none;
 }
 
 .bloemfoto2 {
   left: 0rem;
-  bottom: -42rem;
+  /* bottom: -42rem; */
 
 }
 
@@ -474,7 +481,6 @@ img {
 .aboutmeSection {
   background-color: #f5f5f5;
   height: auto;
-  padding: 3rem 2rem;
   display: flex;
   justify-content: center;
   flex-direction: space-between;
@@ -483,7 +489,7 @@ img {
 .aboutmeContent {
   /* background-color: thistle; */
   display: flex;
-  grid-template-columns: 320px 1fr;
+  /* grid-template-columns: 320px 1fr; */
   gap: 6rem;
   align-items: start;
   width: 100%;
@@ -541,6 +547,20 @@ p {
   justify-content: space-between;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.greenSection,
+.aboutmeSection,
+.skillsSection {
+  padding: 3rem 0; /* i.p.v. 3rem 2rem etc */
+}
+
+
 @media (max-width: 900px) {
   .containerProjectCards {
     flex-wrap: wrap;
@@ -582,6 +602,11 @@ h2 {
   overflow: hidden;
   align-items: start;
   margin: 1rem;
+    margin-top: auto;
+}
+
+.projectCard p {
+  flex: 1;
 }
 
 /* tilt up a bit on hover */
@@ -632,6 +657,7 @@ h2 {
   text-align: start;
   /* background-color: tomato; */
   padding-left: 1rem;
+  padding-top: 1rem;
 }
 
 .cardButton {
@@ -644,14 +670,14 @@ h2 {
   /* indigo-600 */
   color: #303030;
   font-weight: 600;
-  border-radius: 1rem;
+  border-radius: 2rem;
   text-decoration: none;
   transition: 1ms 0.5ms ease;
   font-family: 'tenor sans', serif;
   align-self: center;
   font-size: 17px;
 
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
   border: none;
   cursor: pointer;
 }
@@ -665,7 +691,7 @@ h2 {
 /* Skills Section */
 .skillsSection {
   height: auto;
-  padding: 1rem 0rem 3rem 2rem;
+  /* padding: 1rem 0rem 3rem 2rem; */
   background-color: #f5f5f5;
 
 }
@@ -895,18 +921,19 @@ footer p {
   .bloemfoto2 {
     position: absolute;
     right: 0rem;
-    bottom: -15rem;
+    /* bottom: -15rem; */
     width: 50%;
     max-width: 12rem;
     height: auto;
     pointer-events: none;
     z-index: 1000;
-    transform: translateY(5%);
+    /* transform: translateY(5%); */
+    display: none;
   }
 
   .bloemfoto2 {
     left: 0rem;
-    bottom: -110rem;
+    /* bottom: -110rem; */
 
   }
 
@@ -998,6 +1025,7 @@ footer p {
     pointer-events: none;
     z-index: 1000;
     transform: translateY(5%);
+    display: none;
   }
 
   .bloemfoto2 {
@@ -1005,4 +1033,34 @@ footer p {
     bottom: -100rem;
 
   }
+}
+
+/* Alleen grote schermen: cards naast elkaar houden */
+@media (min-width: 1100px) {
+  /* Geef de cards-kolom meer ruimte */
+  .contents {
+    grid-template-columns: 320px 1fr; /* mag blijven */
+    gap: 3rem;                         /* iets meer ruimte tussen tekst en cards */
+  }
+
+  /* Forceer 3 cards naast elkaar op desktop */
+  .containerProjectCards {
+    grid-template-columns: repeat(3, 19rem);
+    justify-content: center; /* of center, wat jij mooier vindt */
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .containerProjectCards {
+    grid-template-columns: repeat(3, 18rem);
+  }
+}
+
+.balk--contained {
+  /* width: min(1200px, calc(100% - 48px)); 24px links + 24px rechts */
+  margin: 0 auto;
+  height: 10px;
+  background-color: #ffffff;
+  max-width: 1200px;
 }
