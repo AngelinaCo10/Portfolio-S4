@@ -131,7 +131,7 @@ export default function Page() {
                 {/* Card 1 */}
                 <div className="projectCard">
                   <img src="/images/Mario foto.svg" alt="Mario foto" className="projectImage1" />
-                  <h2>Mario & Luigi’s<br />Pizzaria</h2>
+                  <h2>Mario & Luigi’s<br />Pizzeria</h2>
                   <p>
                     I made an orderwebsite for a pizzeria to make the orderprocess
                     easier and it saves time, because they don’t have many employees.
