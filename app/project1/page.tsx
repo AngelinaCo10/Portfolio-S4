@@ -10,7 +10,7 @@ export default function Page() {
         <section className="headertop">
 
           <h1 className="header-title typer">
-            Mario & Luigi's Pizzaria
+            Mario & Luigi's Pizzeria
           </h1>
 
           <p className="header-description">
