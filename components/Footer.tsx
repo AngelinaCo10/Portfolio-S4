@@ -13,7 +13,7 @@ export default function Footer() {
           </a>
 
           <div className="phoneContainer">
-            <a href="tel:+31612345678" className="phoneLink">
+            <a href="tel:+31 6 58906957" className="phoneLink">
               <img
                 src="/images/Phone.svg"
                 alt="Telefoon"
@@ -28,7 +28,4 @@ export default function Footer() {
     </footer>
   );
 }
-<div className="phoneContainer">
-  <img src="/images/Phone.svg" alt="Telefoon" className="footerImages" />
-  <span>+31 6 12345678</span> {/* Vervang door je echte nummer */}
-</div>
+

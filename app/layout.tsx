@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${tenorSans.variable} ${playfairDisplay.variable} font-sans`}>
         <Navbar />
-<main className="page-content">{children}</main>
+        <main className="page-content">{children}</main>
         <Footer />
       </body>
     </html>
