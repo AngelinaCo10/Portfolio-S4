@@ -1,11 +1,9 @@
-## Angelina Coffie
+# Showcase Portfolio Semester 4  
 
-## Showcase Portfolio Semester 4
-
-## Description
+### Description
 In this portfolio, you will read about the projects I have worked on previous semesters and a bit about myself. I will also show some photos of what I have created.
 
-## Overview
+### Overview
 My portfolio contains the following:
 
 Homepage: a homepage with the projects can be found there. You can click on them to navigate to the corresponding pages.
@@ -14,25 +12,26 @@ About me: Introduction about myself.
 
 Projects: I explain the process of the projects and link to my work.
 
-## Installation
+### Installation
 Clone or download this project using: https://github.com/AngelinaCo10/Portfolio-S4.git
 
-## Usage
+### Usage
 
 Navigate through the different sections: About Me and Projects.
 
 Click on the links to see more of my designs.
 
-## Visit Portfolio
+### Visit Portfolio
 https://personal-project-s4.vercel.app/
 
-## Contact
+### Contact
 If you would like to get in touch, you can reach me at: a.coffie@student.fontys.nl
 
 
-## Feedback
+### Feedback
 I am open to feedback and suggestions. 
 
 To open the browser, I use Live Server.
+
 
 
